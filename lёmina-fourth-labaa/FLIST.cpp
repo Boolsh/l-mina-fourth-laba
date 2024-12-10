@@ -7,14 +7,6 @@
 #include "FLIST.h"
 
 
-
-FLIST::FLIST()
-{
-	tail = nullptr;
-	head = nullptr;
-	size = 0;
-}
-
 FLIST::FLIST(std::ifstream& file)
 {
 	Pet* elem = new Pet(file);
@@ -173,7 +165,7 @@ void FLIST::print(std::ostream& stream)
 {
 	if (head)
 	{
-		std::cout << "Список пациентов:\n========================================================\n";
+		stream << "Список пациентов:\n========================================================\n";
 		ptrNODE ptr = head;
 		while (ptr)
 		{

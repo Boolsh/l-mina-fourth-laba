@@ -45,7 +45,7 @@ private:
 		--size;
 	}
 public:
-	FLIST();
+	FLIST() { head = nullptr; tail = nullptr; size = 0; };
 
 	FLIST(std::ifstream& file);
 	~FLIST();
@@ -56,7 +56,7 @@ public:
 
 	TInfo get_ELEM(ptrNODE ptr) { return ptr->get_info(); };
 	size_t get_size() { return size; };
-	bool empty() { return !head->next; };
+	bool empty() { return !head; };
 
 	void print(std::ostream& out = std::cout);
 	void sorting();

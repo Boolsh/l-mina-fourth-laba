@@ -32,7 +32,9 @@ public:
 	TInfo find_at_position(unsigned int position) { return list->find_at_position(position); }
 	void read_from_file(std::ifstream& file) { return list->read_from_file(file); };
 
+	//bool get_special_list_y(int year, Container& container);
 	Container get_special_list_y(int year);
+
 	Container get_special_list_a(int age, std::string name_vac);
 	void sorting();
 

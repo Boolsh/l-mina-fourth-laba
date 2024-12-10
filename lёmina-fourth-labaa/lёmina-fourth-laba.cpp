@@ -4,7 +4,7 @@
 #include "FLIST.h"
 #include "Pet.h"
 #include <iostream>
-const std::string privivki("anti-tyler anti-pudge anti-viper anti-hype anti-antimage anti-katya anti-danya anti-lopa");
+//const std::string privivki("anti-tyler anti-pudge anti-viper anti-hype anti-antimage anti-katya anti-danya anti-lopa");
 
 void print_menu();
 
@@ -107,13 +107,15 @@ void main()
             break;
         }
 
-        case 11:  /*Получить список всех пациентов, посетивших клинику в заданном году,
+         case 11:  /*Получить список всех пациентов, посетивших клинику в заданном году,
             имеющих менее трех прививок.*/
         {
             std::cout << "Введите год для поиска: ";
             int year{};
             std::cin >> year;
+
             Container reslist = list.get_special_list_y(year);
+
             reslist.print();
             break;
         }
